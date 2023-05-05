@@ -1,4 +1,4 @@
-require('newrelic');
+ require('newrelic');
 require('dotenv').config();
 
 var createError = require('http-errors');
@@ -59,7 +59,7 @@ app.use(session({
     secret: 'red_bicis_!!!***!".!.!.123123',
 }));
 
-// var mongoDB = 'mongodb://localhost/red_bicicletas';
+// var mongoDB = 'mongodb://127.0.0.1:27017/red_bicicletas/';
 const mongoDB = process.env.MONGO_URI;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex: true });
 //mongoose.set('useCreateIndex', true);

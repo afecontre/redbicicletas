@@ -7,8 +7,8 @@ var base_url = "http://localhost:3000/api/bicicletas";
 
 describe("Bicleta API", () => {
     beforeEach(function(done) {
-        var mongoDB = 'mongodb://localhost/testdb';
-        mongoose.connect(mongoDB, { useNewUrlParser: true });
+        var mongoDB = 'mongodb://127.0.0.1:27017/red_bicicletas/';
+        mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology:true });
 
         const db = mongoose.connection;
         db.on('error', console.error.bind(console, 'Error de conexion'));
