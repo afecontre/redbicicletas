@@ -1,0 +1,18 @@
+name: Cloud Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up gcloud
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@main
+      with:
+        project_id: <YOUR_PROJECT_ID>
+        service_account_email: <YOUR_SERVICE_ACCOUNT_EMAIL>
+        service_account_key: ${{ secrets.GCLOUD_AUTH }}
+    - name: Deploy to App Engine
+      run: gcloud app deploy
