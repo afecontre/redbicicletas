@@ -11,3 +11,9 @@ COPY . .
 EXPOSE 3000
 
 CMD [ "npm", "start" ]
+
+FROM mongo:latest
+
+COPY db.json /db.json
+
+CMD mongoimport --host mongodb --db redbicicletas --collection bicicletas --type json --file /db.json --jsonArray
