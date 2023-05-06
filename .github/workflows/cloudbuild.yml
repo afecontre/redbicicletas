@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/[TU_PROYECTO]/[TU_IMAGEN]:[TU_TAG]', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/[TU_PROYECTO]/[TU_IMAGEN]:[TU_TAG]']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy']
