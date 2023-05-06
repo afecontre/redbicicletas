@@ -3,7 +3,7 @@ var Bicicleta = require('../../models/bicicleta');
 
 describe('Testing Bicicleta', function(){
   beforeEach(function(done) {
-    var mongoDB = 'mongodb://127.0.0.1:27017/red_bicicletas/';
+    var mongoDB = 'mongodb://localhost:27017/redbicicletas';
     mongoose.disconnect();
     mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology:true });
 

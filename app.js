@@ -59,8 +59,8 @@ app.use(session({
     secret: 'red_bicis_!!!***!".!.!.123123',
 }));
 
-// var mongoDB = 'mongodb://127.0.0.1:27017/red_bicicletas/';
-const mongoDB = process.env.MONGO_URI;
+var mongoDB = 'mongodb://localhost/redbicicletas/';
+//const mongoDB = process.env.MONGO_URI;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex: true });
 //mongoose.set('useCreateIndex', true);
 mongoose.Promise = global.Promise;
