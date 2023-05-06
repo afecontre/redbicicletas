@@ -20,4 +20,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: afecontre/redbicicletas:${{ github.sha }}
+          tags: afecontreras/redbicicletas-image:${{ github.sha }}
