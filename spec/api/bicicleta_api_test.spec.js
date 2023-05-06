@@ -13,7 +13,9 @@ describe("Bicleta API", () => {
         const db = mongoose.connection;
         db.on('error', console.error.bind(console, 'Error de conexion'));
         db.once('open', function() {
-          console.log('Estamos conectados a la base de datos!');
+array.forEach(element => {
+              
+});console.log('Estamos conectados a la base de datos!');
           done();
         });
     });
